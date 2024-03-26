@@ -1,8 +1,10 @@
 import { NavLink } from "react-router-dom";
+import Books from "../Books/Books";
 
 const Home = () => {
   return (
     <div className="container mx-auto mt-8">
+        {/* card container  */}
       <div className="hero h-[650px] bg-base-200 rounded-2xl">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
@@ -22,6 +24,10 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Books></Books>
+
+
     </div>
   );
 };
