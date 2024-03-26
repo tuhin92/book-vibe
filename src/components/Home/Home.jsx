@@ -7,7 +7,7 @@ const Home = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <img
             src="https://i.postimg.cc/VNFtfTQD/pngwing-1.png"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm rounded-lg "
           />
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold">Books to freshen up <br></br> your bookshelf</h1>
