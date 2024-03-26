@@ -118,7 +118,7 @@ const BestSeller = () => {
         <div className="card-body">
           <h2 className="card-title">
           Michael Madhusudan Dutt
-            <div className="badge badge-secondary">1st</div>
+            <div className="badge badge-secondary">6th</div>
           </h2>
           <p className="text-gray-500">Michael Madhusudan Dutt, or Michael Madhusudan Dutta (Bengali: মাইকেল মধুসূদন দত্ত (Maikel Modhushudôn Dôtto ); 25 January 1824 – 29 June 1873) was a popular 19th-century Bengali poet and dramatist. He was a pioneer of Bengali drama. His famous work Meghnād Bôdh Kāvya, is a tragic epic.</p>
           <div className="card-actions justify-end">
