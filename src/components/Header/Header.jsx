@@ -6,10 +6,12 @@ const Header = () => {
         <li className="text-lg"><NavLink to="/">Home</NavLink></li>
         <li className="text-lg"><NavLink to="/listed-books">Listed Books</NavLink></li>
         <li className="text-lg"><NavLink to="/page-to-read">Page to Read</NavLink></li>
+        <li className="text-lg"><NavLink to="/best_seller">Best Seller</NavLink></li>
+        <li className="text-lg"><NavLink to="/about_us">About Us</NavLink></li>
     </>
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 container mx-auto mt-8">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -19,7 +21,7 @@ const Header = () => {
         {links}
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl font-bold">Book Surf</a>
+    <a className="btn btn-ghost text-2xl font-bold"><span className="text-amber-600">Book</span> <span className="text-cyan-600">Surf</span></a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
