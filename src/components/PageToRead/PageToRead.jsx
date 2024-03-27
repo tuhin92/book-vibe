@@ -1,9 +1,14 @@
+import React from 'react';
+import MyChart from '../MyChart/MyChart';
+
+
+
 const PageToRead = () => {
-  return (
-    <div>
-        <h2>This is page to read page</h2>
-    </div>
-  );
+    return (
+        <div>
+            <MyChart></MyChart>
+        </div>
+    );
 };
 
 export default PageToRead;

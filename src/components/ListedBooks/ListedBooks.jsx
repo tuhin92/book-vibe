@@ -26,7 +26,7 @@ const ListedBooks = () => {
               // Render stored data
               storedData.map((book, index) => (
                 <div key={index}>
-                  <div className="h-[300px] bg-base-200 mt-8 rounded-2xl">
+                  <div className="bg-base-200 mt-8 rounded-2xl">
                     <div className="flex flex-col md:flex-row lg:flex-row justify-start gap-32 p-8">
                         <img src={book.image} className="max-w-sm rounded-lg shadow-2xl" />
                         <div>
@@ -34,12 +34,12 @@ const ListedBooks = () => {
                         <p className="py-6">By: {book.author}</p>
                         <div className="flex gap-8">
                             <p>Tag</p>
-                            <p className="text-[#23BE0A] bg-[#e5f1e4] px-2 rounded-3xl">#{book.tags[0]}</p>
-                            <p className="text-[#23BE0A] bg-[#e5f1e4] px-2 rounded-3xl">#{book.tags[1]}</p>
+                            <p className="text-[#23BE0A] text-xs md:text-xs lg:text-base bg-[#e5f1e4] px-2 rounded-3xl">#{book.tags[0]}</p>
+                            <p className="text-[#23BE0A] text-xs md:text-xs lg:text-base bg-[#e5f1e4] px-2 rounded-3xl">#{book.tags[1]}</p>
                             <div className="flex">
-                                <img src="https://i.postimg.cc/LsGB0cbv/Frame.png" alt="" />
-                                <p>Year of Publishing :</p>
-                                <p>{book.yearOfPublishing}</p>
+                                <img className="" src="https://i.postimg.cc/LsGB0cbv/Frame.png" alt="" />
+                                <p className="text-xs md:text-xs lg:text-base">Year of Publishing :</p>
+                                <p className="text-xs md:text-xs lg:text-base">{book.yearOfPublishing}</p>
                             </div>
                         </div>
                         <div className="mt-3 mb-3 text-[#969191] flex gap-8">
