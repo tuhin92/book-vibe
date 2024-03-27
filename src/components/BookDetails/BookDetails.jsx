@@ -39,7 +39,37 @@ const BookDetails = () => {
     }
     
     // Show success toast message
-    toast.success("Book details stored successfully!");
+    toast.success("Mark as Read successfully!");
+  };
+
+  const handleWishlistButtonClick = () => {
+    // Check if data already exists in local storage
+    let existingData = localStorage.getItem("bookDetails");
+    if (existingData) {
+      // If data exists, parse the existing data
+      existingData = JSON.parse(existingData);
+
+      // Check if the current book is already in the stored data
+      const isAlreadyStored = existingData.some((item) => item.id === book.id);
+
+      if (isAlreadyStored) {
+        // If the current book is already stored, show a message
+        toast.warning("You already read this book!");
+        return; // Exit the function
+      }
+
+      // If the current book is not already stored, add it to the existing data
+      existingData.push(book);
+
+      // Store the updated data back in local storage
+      localStorage.setItem("bookDetails", JSON.stringify(existingData));
+    } else {
+      // If no data exists, create a new array with the current book and store it in local storage
+      localStorage.setItem("bookDetails", JSON.stringify([book]));
+    }
+
+    // Show success toast message
+    toast.success("Book added to wishlist successfully!");
   };
 
   return (
@@ -97,7 +127,9 @@ const BookDetails = () => {
               <button className="btn btn-outline btn-secondary px-6" onClick={handleReadButtonClick}>
                 Read
               </button>
-              <button className="btn btn-active btn-accent px-6 text-sm font-semibold">Wishlist</button>
+              <button className="btn btn-active btn-accent px-6 text-sm font-semibold" onClick={handleWishlistButtonClick}>
+                Wishlist
+              </button>
             </div>
           </div>
         </div>
