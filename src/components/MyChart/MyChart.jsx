@@ -40,8 +40,8 @@ const MyChart = () => {
   };
 
   return (
-    <div className="container mx-auto mt-12">
-      <BarChart width={1500} height={600} data={bookDetails}>
+    <div className="container mx-auto mt-12" style={{ width: "100%", maxWidth: "800px" }}>
+      <BarChart width={800} height={500} data={bookDetails}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="bookName" />
         <YAxis />
