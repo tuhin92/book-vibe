@@ -12,6 +12,8 @@ const ListedBooks = () => {
         Books
       </h1>
 
+      {/* Filter option  */}
+
       <Tabs>
         <TabList>
           <Tab>Read Books</Tab>
@@ -20,15 +22,15 @@ const ListedBooks = () => {
 
         {/* Tab-1 (Read Books) */}
         <TabPanel>
-          <div>
-            {/* Check if there's stored data */}
+          <div className="mb-12">
+          <h2 className="text-3xl text-center mt-6">Read Books</h2>
             {storedData && storedData.length > 0 ? (
               // Render stored data
               storedData.map((book, index) => (
                 <div key={index}>
                   <div className="bg-base-200 mt-8 rounded-2xl">
                     <div className="flex flex-col md:flex-row lg:flex-row justify-start gap-32 p-8">
-                        <img src={book.image} className="max-w-sm rounded-lg shadow-2xl" />
+                        <img src={book.image} className="max-w-sm rounded-lg" />
                         <div>
                         <h1 className="text-base font-bold">{book.bookName}</h1>
                         <p className="py-6">By: {book.author}</p>
@@ -61,7 +63,6 @@ const ListedBooks = () => {
                         </div>
                     </div>
                     </div>
-                  {/* Add more details as needed */}
                 </div>
               ))
             ) : (
@@ -74,14 +75,13 @@ const ListedBooks = () => {
         {/* Tab-2 (Wishlist Books) */}
         <TabPanel>
           <div>
-            {/* Check if there's stored data */}
+          <h2 className="text-3xl text-center mt-6">Wishlist Books</h2>
             {storedData && storedData.length > 0 ? (
-              // Render stored data
               storedData.map((book, index) => (
                 <div key={index}>
                   <div className="h-[300px] bg-base-200 mt-8 rounded-2xl">
                     <div className="flex flex-col md:flex-row lg:flex-row justify-start gap-32 p-8">
-                        <img src={book.image} className="max-w-sm rounded-lg shadow-2xl" />
+                        <img src={book.image} className="max-w-sm rounded-lg" />
                         <div>
                         <h1 className="text-base font-bold">{book.bookName}</h1>
                         <p className="py-6">By: {book.author}</p>
