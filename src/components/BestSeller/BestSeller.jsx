@@ -1,6 +1,6 @@
 const BestSeller = () => {
   return (
-    <div className="container mx-auto mt-8">
+    <div className="max-w-7xl mx-auto mt-8 md:px-0 px-14">
         <h2 className="text-4xl font-bold">Best Sellers</h2>
         <hr />
 

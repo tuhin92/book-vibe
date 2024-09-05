@@ -7,7 +7,7 @@ const ListedBooks = () => {
   const storedData = JSON.parse(localStorage.getItem("bookDetails"));
 
   return (
-    <div className="container mx-auto">
+    <div className="max-w-7xl mx-auto">
       <h1 className="text-xl font-bold mt-10 mb-8 p-6 bg-gray-100 text-center rounded-xl">
         Books
       </h1>
